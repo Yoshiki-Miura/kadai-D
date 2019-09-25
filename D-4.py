@@ -19,13 +19,13 @@ class SemanticVersion:
         return f"{self.major}.{self.minor}.{self.patch}"
 
     def patch_version_up(self):
-        self.patch += 1
-        return SemanticVersion(self.major, self.minor, self.patch)
+        new_patch = self.patch + 1
+        return SemanticVersion(self.major, self.minor, new_patch)
 
     def minor_version_up(self):
-        self.minor += 1
-        self.patch = 0
-        return SemanticVersion(self.major, self.minor, self.patch)
+        new_minor = self.minor + 1
+        new_patch = 0
+        return SemanticVersion(self.major, new_minor, new_patch)
 
 
 def main():

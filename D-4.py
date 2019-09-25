@@ -33,7 +33,7 @@ def main():
     py370 = SemanticVersion(major=3, minor=7, patch=0)
 
     py380 = py370.minor_version_up()
-    print(SemanticVersion(3, 8, 0) == py380)  # True
+    print(SemanticVersion(3, 8, 0) == py380)
 
 
 if __name__ == '__main__':
